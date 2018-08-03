@@ -1,19 +1,26 @@
 package utils;
-import data.Book;
+
 import java.util.Scanner;
+import data.Book;
 
 public class DataReader {
     private Scanner sc;
 
-    public DataReader(){
+    public DataReader() {
         sc = new Scanner(System.in);
     }
 
-    public void close(){
+    public void close() {
         sc.close();
     }
 
-    public Book readAndCreateBook(){
+    public int getInt() {
+        int number = sc.nextInt();
+        sc.nextLine();
+        return number;
+    }
+
+    public Book readAndCreateBook() {
         System.out.println("Tytuł: ");
         String title = sc.nextLine();
         System.out.println("Autor: ");
